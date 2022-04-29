@@ -8,11 +8,11 @@ import ethLogo from './assets/ethlogo.png';
 import { networks } from './utils/networks';
 
 // Constants
-const TWITTER_HANDLE = '_buildspace';
+const TWITTER_HANDLE = 'yoea13';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 // Add the domain you will be minting
-const tld = '.ninja';
-const CONTRACT_ADDRESS = '0x96Ec9E807b536463e93852e38C427754A8e7cC41';
+const tld = '.biker';
+const CONTRACT_ADDRESS = '0x77CC0A0F115a086Bff81575F2758A42B1ccD128f';
 
 const App = () => {
   const [editing, setEditing] = useState(false);
@@ -233,7 +233,7 @@ const App = () => {
 	// Render methods
 	const renderNotConnectedContainer = () => (
 		<div className="connect-wallet-container">
-			<img src="https://media.giphy.com/media/3ohhwytHcusSCXXOUg/giphy.gif" alt="Ninja donut gif" />
+      <img src="https://media.giphy.com/media/OZvMMeKdYmPpS/giphy.gif" alt="Biker gif" />
       {/* Call the connectWallet function we just wrote when the button is clicked */}
 			<button onClick={connectWallet} className="cta-button connect-wallet-button">
 				Connect Wallet
@@ -303,7 +303,7 @@ const App = () => {
         <input
           type="text"
           value={record}
-          placeholder='whats ur ninja power?'
+          placeholder='biker power?'
           onChange={e => setRecord(e.target.value)}
         />
           {/* If the editing variable is true, return the "Set record" and "Cancel" button */}
@@ -339,8 +339,8 @@ const App = () => {
       <div className="header-container">
         <header>
           <div className="left">
-            <p className="title">🐱‍👤 Ninja Name Service</p>
-            <p className="subtitle">Your immortal API on the blockchain!</p>
+            <p className="title">🚴🏻‍♂️Biker Name Service🚴🏻‍♂️</p>
+            <p className="subtitle">Your immortal Name Biker on the blockchain!</p>
           </div>
           {/* Display a logo and wallet connection status*/}
           <div className="right">
