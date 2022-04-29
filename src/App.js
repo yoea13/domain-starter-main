@@ -196,7 +196,26 @@ const App = () => {
       console.log(error);
     }
   }
-  
+
+  const withdraw = async () => {
+    try {
+      const { ethereum } = window;
+      if (ethereum) {
+        // You know all this
+        const provider = new ethers.providers.Web3Provider(ethereum);
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(CONTRACT_ADDRESS, contractAbi.abi, signer);
+          
+        // Get all the domain names from our contract
+        const names = await contract.withdraw();
+            
+        console.log("Withdraw OK");
+      }
+    } catch(error){
+      console.log(error);
+    }
+  }
+
   // This will run any time currentAccount or network are changed
   useEffect(() => {
     if (network === 'Polygon Mumbai Testnet') {
@@ -320,9 +339,14 @@ const App = () => {
             </div>
           ) : (
             // If editing is not true, the mint button will be returned instead
+            <div className="button-container">
             <button className='cta-button mint-button' disabled={loading} onClick={mintDomain}>
-              Mint
-            </button>  
+                Mint
+              </button>  
+              <button className='cta-button mint-button' disabled={loading} onClick={withdraw}>
+                Withdraw
+              </button>  
+            </div>
           )}
       </div>
     );
