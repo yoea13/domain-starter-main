@@ -12,7 +12,7 @@ const TWITTER_HANDLE = 'yoea13';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 // Add the domain you will be minting
 const tld = '.biker';
-const CONTRACT_ADDRESS = '0x56fDB8C058f3ac607C87230E205aC0E76F1003bf';
+const CONTRACT_ADDRESS = '0x18576D28e737A7eDB4C6ed02A1d244339d709Efd';
 
 const App = () => {
   const [editing, setEditing] = useState(false);
