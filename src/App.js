@@ -12,7 +12,7 @@ const TWITTER_HANDLE = 'yoea13';
 const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
 // Add the domain you will be minting
 const tld = '.biker';
-const CONTRACT_ADDRESS = '0x77CC0A0F115a086Bff81575F2758A42B1ccD128f';
+const CONTRACT_ADDRESS = '0x56fDB8C058f3ac607C87230E205aC0E76F1003bf';
 
 const App = () => {
   const [editing, setEditing] = useState(false);
@@ -328,11 +328,9 @@ const App = () => {
           {/* If the editing variable is true, return the "Set record" and "Cancel" button */}
           {editing ? (
             <div className="button-container">
-              // This will call the updateDomain function we just made
               <button className='cta-button mint-button' disabled={loading} onClick={updateDomain}>
                 Set record
               </button>  
-              // This will let us get out of editing mode by setting editing to false
               <button className='cta-button mint-button' onClick={() => {setEditing(false)}}>
                 Cancel
               </button>  
