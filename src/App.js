@@ -342,7 +342,7 @@ const App = () => {
                 Mint
               </button>  
               <button className='cta-button mint-button' disabled={loading} onClick={withdraw}>
-                Withdraw
+                W
               </button>  
             </div>
           )}
@@ -375,7 +375,8 @@ const App = () => {
         {!currentAccount && renderNotConnectedContainer()}
         {currentAccount && renderInputForm()}
         {mints && renderMints()}
-				
+
+
 				<div className="footer-container">
 					<img alt="Twitter Logo" className="twitter-logo" src={twitterLogo} />
 					<a
